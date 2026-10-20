@@ -1,92 +1,212 @@
+# Network Topology
 
-🌐 Computer Network Topologies (Types and Their Uses) 
+## Overview
 
-A network topology describes how devices (computers, servers, routers) are connected in a network. Each topology has a different structure, advantages, and use cases depending on the system needs.
+Network topology describes how devices and connections are arranged within a computer network. It can represent the physical layout of network devices or the logical way data moves between them.
 
-1. 🚌 Bus Topology
-🔹 Explanation: All devices are connected to a single main cable (backbone).
-🔹 Advantages:
-Low cost (less cable used)
-Easy to set up for small networks
-🔹 Disadvantages:
-If the main cable fails, the whole network goes down
-Difficult to troubleshoot
-🔹 Usage:
-Small local networks
-Basic computer labs
+Understanding network topology helps explain how devices communicate, how networks are designed, and how network failures can affect communication.
 
-2. ⭐ Star Topology
-🔹 Explanation: All devices are connected to a central device (switch or hub).
-🔹 Advantages:
-Easy to manage and expand
-One cable failure does not affect others
-High performance and widely used
-🔹 Disadvantages:
-If the central device fails, the whole network stops
-Requires more cables
-🔹 Usage:
-Offices
-Schools
-Modern enterprise networks
+This document introduces common network topologies, their advantages and disadvantages, and their relevance to cybersecurity.
 
-3. 🔄 Ring Topology
-🔹 Explanation: Devices are connected in a circle (ring), and data travels in one direction or both directions.
-🔹 Advantages:
-Organized data flow
-Fewer data collisions
-🔹 Disadvantages:
-One failure can disrupt the entire network
-Hard to expand
-🔹 Usage:
-Older network systems
-Some industrial network
+## 1. Types of Network Topology
 
-5. 🌳 Tree Topology
-🔹 Explanation:A combination of star and bus topology, arranged in a hierarchical structure (like a tree).
-🔹 Advantages:
-Suitable for large networks
-Easy to expand
-Clear hierarchy
-🔹 Disadvantages:
-If the main backbone fails, many nodes are affected
-More complex setup
-🔹 Usage:
-Large organizations
-Universities and corporate systems
-5. 🕸️ Mesh Topology
-🔹 Explanation: Every device is connected to multiple or all other devices.
-🔹 Advantages:
-Very reliable (multiple paths)
-High fault tolerance
-Rarely goes down
-🔹 Disadvantages:
-Expensive (many connections/cables)
-Difficult to configure
-🔹 Usage:
-Military systems
-Banking systems
-Critical infrastructure and internet backbone
+### 1.1 Bus Topology
 
-🔀 Hybrid Topology (Network Topology Type)
-🔹 Definition
-Hybrid topology is a network structure that combines two or more different topologies (for example: Star + Bus, Star + Ring). It is used to build networks that are more flexible and scalable.
-🔹 How it works
-Instead of using only one type, companies mix topologies based on needs:
-One department may use Star topology
-Another section may use Ring or Bus
-All are connected into one larger system
+In a bus topology, devices connect to a shared main communication cable.
 
-🔹 Advantages
-Very flexible (can mix different designs)
-Scalable for large organizations
-More reliable than single topology
-Easy to customize based on department needs
-🔹 Disadvantages
-Expensive to design and maintain
-More complex setup
-Requires skilled network management
-🔹 Usage
-Large companies / enterprise networks
-Universities and campuses
-Data centers
-Government or complex IT infrastructure
+```text
+[PC 1] ---- [PC 2] ---- [PC 3] ---- [PC 4]
+                 Shared Cable
+```
+
+**Advantages**
+- Requires relatively little cabling.
+- Simple to understand for small, basic setups.
+
+**Disadvantages**
+- A failure in the main cable can disrupt the entire network.
+- Performance can degrade as network traffic increases.
+- Troubleshooting cable faults can be difficult.
+
+### 1.2 Star Topology
+
+In a star topology, each device connects to a central device, usually a switch in a wired LAN.
+
+```mermaid
+flowchart TD
+    SW["Central Switch"]
+    PC1["PC 1"] --- SW
+    PC2["PC 2"] --- SW
+    PC3["PC 3"] --- SW
+    PC4["PC 4"] --- SW
+```
+
+**Advantages**
+- Easy to add or remove devices.
+- A single endpoint cable failure usually affects only that device.
+- Easier to troubleshoot than a shared-bus layout.
+
+**Disadvantages**
+- Failure of the central switch can disrupt connected devices.
+- Requires a separate connection from each device to the central point.
+
+### 1.3 Ring Topology
+
+In a ring topology, each device connects to two neighboring devices, forming a closed loop.
+
+```mermaid
+flowchart TD
+    A["Device A"] --- B["Device B"]
+    B --- C["Device C"]
+    C --- D["Device D"]
+    D --- A
+```
+
+**Advantages**
+- Can provide orderly data transmission in some ring-based designs.
+- May reduce collisions in networks using specific ring protocols.
+
+**Disadvantages**
+- A single link or device failure can disrupt a basic ring.
+- Changes and troubleshooting can be more complicated.
+
+Some ring technologies use redundancy or dual rings to improve resilience.
+
+### 1.4 Mesh Topology
+
+In a mesh topology, devices have multiple interconnections. A full mesh connects every device directly to every other device, while a partial mesh connects only selected devices.
+
+```mermaid
+flowchart TD
+    A["Node A"] --- B["Node B"]
+    A --- C["Node C"]
+    A --- D["Node D"]
+    B --- C
+    B --- D
+    C --- D
+```
+
+**Advantages**
+- Multiple paths can improve resilience.
+- Alternative paths may keep communication available when a link fails.
+
+**Disadvantages**
+- Full mesh networks require many connections.
+- Setup and maintenance can be more complex.
+- Equipment and cabling costs may be higher.
+
+### 1.5 Tree Topology
+
+A tree topology organizes devices into hierarchical levels, often using a core, distribution, and access structure.
+
+```mermaid
+flowchart TD
+    CORE["Core Switch"]
+    DIST1["Distribution Switch 1"]
+    DIST2["Distribution Switch 2"]
+    PC1["PC 1"]
+    PC2["PC 2"]
+    PC3["PC 3"]
+    PC4["PC 4"]
+
+    CORE --- DIST1
+    CORE --- DIST2
+    DIST1 --- PC1
+    DIST1 --- PC2
+    DIST2 --- PC3
+    DIST2 --- PC4
+```
+
+**Advantages**
+- Supports structured network growth.
+- Makes it easier to organize devices into groups.
+- Can simplify network administration.
+
+**Disadvantages**
+- Failure of an important upstream device can affect an entire branch.
+- Network design and configuration require planning.
+
+### 1.6 Hybrid Topology
+
+A hybrid topology combines two or more topology types in the same network.
+
+For example, an office may use star topology inside individual departments and connect those departments through a hierarchical network.
+
+**Advantages**
+- Flexible design.
+- Can accommodate different organizational requirements.
+- Allows network segments to be designed for specific purposes.
+
+**Disadvantages**
+- Can be more complex to design and troubleshoot.
+- Costs depend on the devices, links, and redundancy required.
+
+## 2. Topology Comparison
+
+| Topology | Main Advantage | Main Disadvantage |
+|---|---|---|
+| Bus | Simple shared layout | Main cable failure can affect all devices |
+| Star | Easy to manage endpoints | Central device is a potential single point of failure |
+| Ring | Orderly communication in certain designs | Basic ring can be disrupted by a failure |
+| Mesh | Multiple communication paths | Higher cost and complexity |
+| Tree | Structured and scalable | Upstream failures can affect branches |
+| Hybrid | Flexible design | More complex to manage |
+
+These are general characteristics. Actual behavior depends on the technology, redundancy, and network configuration.
+
+## 3. Physical vs. Logical Topology
+
+**Physical topology** describes how devices and cables are physically connected.
+
+**Logical topology** describes how data flows between devices, which may differ from the physical layout.
+
+For example, devices may be physically connected to switches in a star layout while logical network segmentation uses VLANs to separate traffic.
+
+## 4. Why Network Topology Matters in Cybersecurity
+
+Understanding network topology helps security practitioners:
+
+- Identify important network devices and connections.
+- Understand where network segmentation may be applied.
+- Identify potential single points of failure.
+- Understand how traffic may flow between network segments.
+- Plan monitoring and security controls.
+- Investigate network connectivity and security incidents.
+
+A topology diagram can also help identify where firewalls, monitoring systems, and access control policies may be needed.
+
+## 5. Practical Exercise
+
+### Scenario
+
+Imagine a small office with:
+
+- 4 employee computers.
+- 1 network printer.
+- 1 central switch.
+- 1 router connected to the internet.
+
+### Tasks
+
+1. Draw a network topology diagram for the office.
+2. Identify which device acts as the central connection point.
+3. Explain what could happen if the central switch fails.
+4. Suggest one improvement to make the network more resilient.
+5. Explain how the office could separate guest devices from internal devices.
+
+Record your diagram, reasoning, and observations in this repository.
+
+## Learning Outcome
+
+After studying this topic, I aim to identify common network topologies, compare their advantages and disadvantages, and understand how topology affects network reliability, troubleshooting, and security design.
+
+My next step is to practise creating simple network diagrams and explore how network devices communicate within a local area network.
+
+## References
+
+- [Cisco — Networking Basics](https://www.cisco.com/)
+- [Mermaid Documentation — Getting Started](https://mermaid.js.org/intro/)
+
+---
+
+*Understanding how networks are connected is a foundation for understanding how to secure them.*
