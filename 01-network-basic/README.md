@@ -1,111 +1,85 @@
 
-🌐 01 - Network Basic Concepts
+# 🌐 Networking Fundamentals
 
-This section introduces the fundamental concepts of computer networking. It is designed to help beginners understand how networks work, how devices communicate, and how data is transferred across systems.
+A structured learning repository covering computer networking fundamentals, addressing, protocols, and practical networking exercises.
 
-🧠 1. What is a Computer Network?
+This repository documents my learning journey in networking as part of my preparation for a career in cybersecurity, with a focus on understanding how systems communicate and how networks can be analyzed and secured.
 
-A computer network is a collection of devices connected together to share data and resources.
+## 🎯 Learning Objectives
 
-📌 Simple real-world examples:
-Accessing the internet via WiFi
-Sending messages through WhatsApp
-Printing documents from another device
-Watching videos on YouTube
+- Understand fundamental networking concepts and architectures.
+- Learn IP addressing, subnetting, and common network protocols.
+- Explore network communication through practical exercises.
+- Build a foundation for network security and ethical hacking.
 
-All of these actions rely on network communication between devices.
+## 📚 Table of Contents
 
-🌍 2. Types of Networks
-🔷 LAN (Local Area Network)
+| No. | Topic | Description | Status |
+|:---:|---|---|:---:|
+| 01 | [Network Basic Concepts](01-network-basic-concepts.md) | Network types, devices, MAC addresses, IP addresses, and data communication. | Completed |
+| 02 | [IP Addressing](02-ip-addressing.md) | IPv4, IPv6, private and public IP addresses, and address ranges. | Planned |
+| 03 | [Subnetting](03-subnetting.md) | Subnet masks, CIDR notation, network addresses, and host ranges. | Planned |
+| 04 | [OSI & TCP/IP Models](04-osi-and-tcp-ip-models.md) | Network layers and how communication functions are organized. | Planned |
+| 05 | [Protocols & Ports](05-network-protocols-and-ports.md) | TCP, UDP, DNS, HTTP/HTTPS, SSH, and common ports. | Planned |
+| 06 | [Networking Labs](labs/README.md) | Practical exercises, command-line tools, observations, and results. | Planned |
 
-A network that covers a small geographical area such as a home, office, or school.
+> **Progress note:** Update the status as each topic is studied, documented, and reviewed.
 
-Example:
+## 🗺️ Learning Roadmap
 
-Home WiFi network
-School computer lab
-🔷 WAN (Wide Area Network)
+The learning path progresses from basic concepts to practical networking and security applications.
 
-A network that connects multiple LANs over large distances such as cities or countries.
+| Stage | Focus Area | Key Skills |
+|:---:|---|---|
+| 01 | Fundamentals | Network types, devices, MAC and IP addresses |
+| 02 | Addressing | IPv4, IPv6, private IPs, and CIDR |
+| 03 | Network Design | Subnetting and network segmentation |
+| 04 | Protocols | TCP, UDP, DNS, HTTP/HTTPS, and SSH |
+| 05 | Practical Skills | `ip`, `ping`, `traceroute`, and `tcpdump` |
+| 06 | Security Applications | Traffic analysis, service discovery, and network security |
 
-Example:
+## 🧪 Practical Lab Documentation
 
-The Internet
-🔷 MAN (Metropolitan Area Network)
+Practical exercises will follow a consistent documentation structure:
 
-A network that covers a city or campus area.
+| Section | Purpose |
+|---|---|
+| Objective | Define what the lab is intended to demonstrate. |
+| Environment | Describe the operating system, tools, and lab setup. |
+| Procedure | Record the commands and steps performed. |
+| Results | Document the observed output and findings. |
+| Analysis | Explain what the results mean. |
+| Key Takeaways | Summarize what was learned. |
 
-Example:
+All security testing will be conducted in authorized environments.
 
-University network connecting multiple buildings
-🧩 3. Network Devices
-🔌 Router
+## 🛡️ Relevance to Cybersecurity
 
-A device that connects different networks and routes data between them.
+Networking fundamentals support several cybersecurity activities:
 
-Example use case:
-Connecting your home network to the internet.
+- **Network reconnaissance:** Understanding hosts, IP addresses, and exposed services.
+- **Traffic analysis:** Interpreting network communication and packet captures.
+- **Network security:** Understanding segmentation, filtering, and access controls.
+- **Penetration testing:** Building the foundation required to interpret scan results and assess network services.
 
-🔀 Switch
+## 📈 Progress Tracker
 
-A device used to connect multiple devices within the same local network.
+| Category | Progress |
+|---|---|
+| Networking Fundamentals | In progress |
+| IP Addressing & Subnetting | Not started |
+| Network Protocols | Not started |
+| Practical Networking Labs | Not started |
+| Network Security Applications | Not started |
 
-Example use case:
-Connecting multiple computers in an office LAN.
+## 📌 Documentation Principles
 
-📡 Access Point
+- Keep explanations clear, technically accurate, and beginner-friendly.
+- Include practical examples wherever possible.
+- Document both successful results and mistakes that lead to useful lessons.
+- Use screenshots or command output when they provide meaningful evidence.
+- Update documentation as knowledge and practical experience improve.
 
-A device that provides wireless connectivity to a network.
+---
 
-Example use case:
-WiFi hotspot in a café or home.
-
-🆔 4. MAC Address
-
-A MAC address is a unique identifier assigned to a network interface card (NIC).
-
-Example:
-
-00:1A:2B:3C:4D:5E
-
-It is used for communication within a local network (LAN).
-
-🌐 5. IP Address (Basic Concept)
-
-An IP address is a logical address used to identify a device in a network.
-
-Example:
-
-192.168.1.10
-
-It allows devices to communicate across networks.
-
-🔄 6. How Data Communication Works (Simple Flow)
-
-Example: opening a website
-
-Your device sends a request
-The router forwards the request to the internet
-The server processes the request
-Data is sent back to your device
-The website is displayed
-🧪 7. Real-World Applications
-
-Networking is used in:
-
-Web browsing
-Online gaming
-Video streaming
-File sharing
-Messaging applications
-🛠️ 8. Importance in IT & Cybersecurity
-
-Understanding networking is essential for:
-
-Network configuration and management
-Troubleshooting connectivity issues
-Understanding data flow in systems
-Building cybersecurity fundamentals
-🎯 Learning Objective
-
-To understand the core components of computer networks and how they interact before moving into IP addressing, subnetting, and practical network simulations.
+**Purpose:** To build a strong networking foundation for further study in cybersecurity, particularly network security and ethical hacking.
