@@ -1,95 +1,63 @@
-# 🌐 Networking Fundamentals
+# Introduction — My Networking Learning Journey
 
-**Computer Networking | Practical Learning | Cybersecurity Foundations**
+## About This Learning Journey
 
-## Overview
+I am an Informatics Engineering student building my knowledge of computer networking as part of my cybersecurity learning journey.
 
-This repository contains my networking study notes and practical exercises, covering fundamental networking concepts, network addressing, protocols, topology design, and connectivity testing.
+I am starting with the fundamentals to understand how devices communicate, how networks operate, and how data moves between systems.
 
-The goal is to develop a strong understanding of how networks operate and build a foundation for further learning in network security and ethical hacking.
+This repository documents my learning process, including concepts I have studied, practical exercises, and lessons learned along the way.
 
-## 📚 Documentation
+## Why I Am Learning Networking
 
-| No. | Topic | Description | Status |
-|:---:|---|---|:---:|
-| 00 | [Introduction](00-introduction/README.md) | Learning objectives, study approach, and repository purpose. | Available |
-| 01 | [Network Basic Concepts](01-network-basic-concepts.md) | Network types, devices, MAC addresses, IP addresses, and data communication. | Documented |
-| 02 | IP Addressing | IPv4, IPv6, private and public IP addresses. | Planned |
-| 03 | Subnetting | Subnet masks, CIDR notation, and host ranges. | Planned |
-| 04 | OSI & TCP/IP Models | Network layers and communication processes. | Planned |
-| 05 | Network Protocols & Ports | TCP, UDP, DNS, HTTP/HTTPS, SSH, and common ports. | Planned |
-| 06 | Network Topologies | Network design and simulation exercises. | Planned |
-| 07 | [Practical Labs](labs/README.md) | Hands-on exercises, connectivity tests, and troubleshooting. | Planned |
+Networking is an important foundation for understanding cybersecurity.
 
-*Topics marked as planned will be documented as I progress.*
+Before exploring more advanced topics such as penetration testing and ethical hacking, I want to develop a clearer understanding of how networks work.
 
-## 🗺️ Learning Roadmap
+My learning objectives are to:
 
-```text
-01. Networking Fundamentals
-          |
-          v
-02. IP Addressing & Subnetting
-          |
-          v
-03. OSI & TCP/IP Models
-          |
-          v
-04. Protocols & Ports
-          |
-          v
-05. Network Topologies & Simulation
-          |
-          v
-06. Practical Networking Labs
-          |
-          v
-07. Networking for Cybersecurity
-```
+- Understand basic networking concepts.
+- Learn how IP addresses and ports are used.
+- Understand network protocols and communication models.
+- Explore network topologies and basic network configurations.
+- Apply networking knowledge through practical exercises.
+- Build a foundation for future cybersecurity labs.
 
-## 🧪 Practical Approach
+## My Learning Approach
 
-I combine theoretical study with hands-on exercises to reinforce my understanding.
+I am learning these topics step by step, starting with the basics and gradually moving toward practical exercises.
 
-| Activity | Purpose |
-|---|---|
-| Network simulations | Understand network structures and device communication. |
-| Connectivity testing | Practice using tools such as `ping`. |
-| Linux networking commands | Inspect network interfaces and configurations. |
-| Troubleshooting | Identify and analyze basic connectivity issues. |
-| Technical documentation | Record procedures, observations, and lessons learned. |
+My approach includes:
 
-## 🛡️ Cybersecurity Relevance
+1. **Learn:** Study a concept and understand its purpose.
+2. **Practice:** Apply the concept through simple exercises or labs.
+3. **Document:** Write down important concepts, commands, and observations.
+4. **Review:** Revisit topics to strengthen my understanding.
 
-Networking fundamentals are essential for understanding:
+I focus on understanding what I am doing rather than simply memorizing commands or following tutorials.
 
-- Network reconnaissance and service discovery.
-- Packet capture and traffic analysis.
-- Network segmentation and access controls.
-- Network security testing in authorized environments.
+## What I Document
 
-These topics will support my long-term learning path toward cybersecurity and ethical hacking.
+For each topic, I aim to include:
 
-## 📊 Current Progress
+- A simple explanation of the concept.
+- Important terminology.
+- Examples or diagrams when useful.
+- Practical exercises and observations.
+- Lessons learned and areas that need further practice.
 
-| Learning Area | Status |
-|---|---|
-| Introduction | Documented |
-| Network Basic Concepts | Documented |
-| IP Addressing & Subnetting | Not started |
-| Network Protocols | Not started |
-| Network Simulation & Practical Labs | Not started |
+## Current Focus
 
-*Progress reflects my current documentation and learning activities.*
+My current focus is on understanding basic computer networking concepts before moving on to IP addressing, subnetting, network protocols, and practical networking exercises.
 
-## 📌 Documentation Principles
+I will update this documentation as I progress and gain more hands-on experience.
 
-- Clear and structured explanations.
-- Practical examples where relevant.
-- Recorded commands and observed results.
-- Honest progress tracking.
-- Continuous improvement through practice and review.
+## Learning Philosophy
+
+I believe that strong technical skills are built through consistent practice, curiosity, and a willingness to learn from mistakes.
+
+This repository is a record of that process, from learning the fundamentals to developing practical skills that I can apply in cybersecurity.
 
 ---
 
-**Learn the fundamentals. Practice the concepts. Build toward cybersecurity.**
+*Building my knowledge one concept and one practical exercise at a time.*
