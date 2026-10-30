@@ -142,18 +142,69 @@ The results confirm that the listed interfaces are operating as expected based o
 
 ## 5. Connectivity Testing
 
-The following connectivity tests are planned:
+Connectivity testing was performed to verify communication between devices within the same VLAN and between different VLANs.
 
-| Source | Destination | Expected Result | Actual Result |
-|---|---|---|---|
-| PC0 (VLAN 10) | PC1 (VLAN 10) | Successful | Not tested yet |
-| PC0 (VLAN 10) | PC3 (VLAN 10) | Successful | Not tested yet |
-| PC1 (VLAN 10) | PC3 (VLAN 10) | Successful | Not tested yet |
+The tests were conducted using the `ping` command in Cisco Packet Tracer to verify network connectivity across SW1 and SW2.
 
-**Ping command example:**
+### 5.1 Network Connectivity Test Results
+
+| No. | Source | Destination | Expected Result | Actual Result |
+|---|---|---|---|---|
+| 1 | PC0 (VLAN 10) | PC1 (VLAN 10) | Successful | Successful |
+| 2 | PC0 (VLAN 10) | PC3 (VLAN 10) | Successful | Successful |
+| 3 | PC1 (VLAN 10) | PC3 (VLAN 10) | Successful | Successful |
+| 4 | PC2 (VLAN 20) | PC0 (VLAN 10) | Failed | Failed |
+| 5 | PC2 (VLAN 20) | PC3 (VLAN 10) | Failed | Failed |
+
+### 5.2 Ping Command
+
+The following command was used to test connectivity between devices:
+
 ```bash
-ping 192.168.10.11
+ping [Destination IP Address]
 ```
+
+### 5.3 Connectivity Test Evidence
+
+**Test 1 – PC0 to PC1 (VLAN 10)**
+
+Both devices are connected to SW1 and belong to VLAN 10. The ping test confirms successful communication within the same VLAN and switch.
+
+![PC0 to PC1 Ping Test](images/ping-pc0-to-pc1.png)
+
+**Test 2 – PC0 to PC3 (VLAN 10)**
+
+PC0 and PC3 belong to VLAN 10 but are connected to different switches. The successful ping confirms that VLAN 10 traffic can pass through the trunk link between SW1 and SW2.
+
+![PC0 to PC3 Ping Test](images/ping-pc0-to-pc3.png)
+
+**Test 3 – PC1 to PC3 (VLAN 10)**
+
+Both devices belong to VLAN 10 and are connected to different switches. The successful ping further confirms connectivity across the trunk link.
+
+![PC1 to PC3 Ping Test](images/ping-pc1-to-pc3.png)
+
+**Test 4 – PC2 to PC0 (VLAN 20 to VLAN 10)**
+
+PC2 belongs to VLAN 20, while PC0 belongs to VLAN 10. The ping test fails because inter-VLAN routing has not been configured.
+
+![PC2 to PC0 Ping Test](images/ping-pc2-to-pc0.png)
+
+**Test 5 – PC2 to PC3 (VLAN 20 to VLAN 10)**
+
+PC2 and PC3 belong to different VLANs. The ping test fails because devices in different VLANs require inter-VLAN routing to communicate.
+
+![PC2 to PC3 Ping Test](images/ping-pc2-to-pc3.png)
+
+### 5.4 Overall Verification
+
+The connectivity tests confirm the following:
+
+- Devices within VLAN 10 can communicate successfully on the same switch.
+- Devices within VLAN 10 can communicate across different switches through the trunk link.
+- Devices in VLAN 10 and VLAN 20 cannot communicate because inter-VLAN routing has not been configured.
+
+These results demonstrate that VLAN segmentation and trunk configuration are functioning as expected in the network topology.
 
 ## 6. Verification Summary
 
