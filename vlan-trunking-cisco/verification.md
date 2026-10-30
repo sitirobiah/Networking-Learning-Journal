@@ -13,9 +13,11 @@ The verification process checks:
 ## 2. VLAN Verification
 
 **Command:**
-```bash
-show vlan brief
-```
+
+### SW1 VLAN Verification
+
+![SW1 VLAN Verification](images/sw1-vlan-verification.png)
+
 
 ### SW1 Results
 
