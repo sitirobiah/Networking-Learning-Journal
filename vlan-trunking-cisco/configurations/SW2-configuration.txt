@@ -1,1 +1,59 @@
+SW2 CONFIGURATION
+Cisco Catalyst 2960
 
+========================================
+1. Enter Global Configuration Mode
+========================================
+
+enable
+configure terminal
+
+! Set switch hostname
+hostname SW2
+
+
+========================================
+2. Create VLANs
+========================================
+
+! Create VLAN 10 for Finance Department
+vlan 10
+name Keuangan
+
+! Create VLAN 20 for Engineering Department
+vlan 20
+name Engineering
+
+exit
+
+
+========================================
+3. Configure Access Ports
+========================================
+
+! Assign FastEthernet 0/1 to VLAN 20 (Engineering)
+interface fa0/1
+switchport mode access
+switchport access vlan 20
+
+! Assign FastEthernet 0/2 to VLAN 10 (Finance)
+interface fa0/2
+switchport mode access
+switchport access vlan 10
+
+
+========================================
+4. Configure Trunk Ports
+========================================
+
+! Configure GigabitEthernet 0/1 and 0/2 as trunk ports
+! These ports connect SW2 to SW1
+interface range gig0/1-2
+switchport mode trunk
+
+
+========================================
+5. Finish Configuration
+========================================
+
+end
