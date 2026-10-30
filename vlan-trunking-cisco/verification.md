@@ -30,8 +30,9 @@ The verification process checks:
 
 ### SW2 Results
 
-*Pending verification.*
+### SW2 VLAN Verification
 
+![SW2 VLAN Verification](images/sw2-vlan-verification.png)
 ## 3. Trunk Port Verification
 
 **Command:**
