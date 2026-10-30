@@ -198,7 +198,7 @@ PC2 and PC3 belong to different VLANs. The ping test fails because devices in di
 
 ### 5.4 Overall Verification
 
-The connectivity tests confirm the following:
+The connectivity tests confirmed the following:
 
 - Devices within VLAN 10 can communicate successfully on the same switch.
 - Devices within VLAN 10 can communicate across different switches through the trunk link.
@@ -208,21 +208,34 @@ These results demonstrate that VLAN segmentation and trunk configuration are fun
 
 ## 6. Verification Summary
 
-Based on the initial verification:
+Based on the configuration and verification results, the following findings were confirmed:
 
-- VLAN 10 and VLAN 20 were created successfully on SW1.
-- SW1 access port assignments were verified.
-- SW2 Gig0/1 was confirmed to be operating as a trunk.
-- SW2 Gig0/2 is currently down.
-- PC connectivity testing has not been completed.
+- VLAN 10 and VLAN 20 were successfully created on the switches.
+- Access port assignments were verified on SW1 and SW2.
+- Trunk connections between SW1 and SW2 were successfully verified using IEEE 802.1Q encapsulation.
+- VLANs 1, 10, and 20 were confirmed to be active and forwarding traffic through the trunk link.
+- SW2 interface statuses were verified using the `show ip interface brief` command.
+- GigabitEthernet0/1 on SW2 was confirmed to be operational (Up/Up).
+- GigabitEthernet0/2 on SW2 was confirmed to be down (Down/Down).
+- Connectivity between devices within VLAN 10 was successfully tested.
+- Communication between VLAN 10 and VLAN 20 was unsuccessful because inter-VLAN routing was not configured.
 
 ## 7. Learning Notes
 
 Through this lab, I learned how to:
 
-- Create VLANs on Cisco switches.
+- Create and configure VLANs on Cisco switches.
 - Assign access ports to specific VLANs.
-- Configure trunk ports using IEEE 802.1Q.
-- Verify VLAN and interface status using Cisco IOS commands.
+- Configure trunk ports using IEEE 802.1Q encapsulation.
+- Understand how trunk links carry traffic between switches.
+- Verify VLAN and trunk configurations using Cisco IOS commands.
+- Check interface operational status using `show ip interface brief`.
+- Perform network connectivity testing using the `ping` command.
+- Understand how VLAN segmentation separates network traffic.
+- Identify why communication between different VLANs requires inter-VLAN routing.
 
-**Project Status:** In Progress
+### Key Takeaway
+
+This lab helped me understand how VLANs and trunk links work together in a switched network. I also gained practical experience in configuring switches, verifying network connectivity, and understanding the importance of VLAN segmentation.
+
+**Project Status:** Completed
