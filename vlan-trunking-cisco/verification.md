@@ -36,17 +36,20 @@ The verification process checks:
 ## 3. Trunk Port Verification
 
 **Command:**
+
 ```bash
 show interfaces trunk
 ```
 
 ### SW2 Results
 
-| Port | Mode | Encapsulation | Status | Native VLAN |
-|---|---|---|---|---|
-| Gig0/1 | On | 802.1Q | Trunking | 1 |
+| **Port** | **Mode** | **Encapsulation** | **Status** | **Native VLAN** |
+| -------- | -------- | ----------------- | ---------- | --------------- |
+| Gig0/1   | On       | 802.1Q            | Trunking   | 1               |
 
 **Result:** GigabitEthernet0/1 is successfully operating as a trunk port. VLANs 1, 10, and 20 are allowed and active on this trunk.
+
+![SW2 Trunk Verification](images/sw2-trunk-verification.png)
 
 ## 4. Interface Status Verification
 
