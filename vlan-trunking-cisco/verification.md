@@ -35,40 +35,80 @@ The verification process checks:
 ![SW2 VLAN Verification](images/sw2-vlan-verification.png)
 ## 3. Trunk Port Verification
 
+At this stage, I verified the trunk port configuration on both SW1 and SW2 using the `show interfaces trunk` command. This verification ensures that the trunk links are operating correctly and allowing VLAN traffic to pass between switches.
+
 ### SW1 Results
 
+**Command:**
 
+```bash
 show interfaces trunk
+```
 
+**Output Summary:**
 
-Output Summary:
-Port	Mode	Encapsulation	Status	Native VLAN
-Gig0/1	On	802.1Q	Trunking	1
+| Port | Mode | Encapsulation | Status | Native VLAN |
+|---|---|---|---|---|
+| Gig0/1 | On | 802.1Q | Trunking | 1 |
 
-VLANs Allowed: 1-1005
+| Verification | Result |
+|---|---|
+| VLANs Allowed | 1-1005 |
+| VLANs Allowed and Active | 1, 10, 20 |
+| VLANs in Spanning Tree Forwarding State | 1, 10, 20 |
 
-VLANs Allowed and Active: 1, 10, 20
+**Verification Result:**
 
-VLANs in Spanning Tree Forwarding State: 1, 10, 20
+GigabitEthernet0/1 is successfully operating as a trunk port. VLANs 1, 10, and 20 are active and forwarding traffic.
 
-Result: GigabitEthernet0/1 is successfully operating as a trunk port. VLANs 1, 10, and 20 are active and forwarding traffic.
+**SW1 Verification Evidence:**
 
-SW2 Results
-Command:
+![SW1 Trunk Verification](images/sw1-trunk-verification.png)
+
+---
+
+### SW2 Results
+
+**Command:**
+
+```bash
 show interfaces trunk
+```
 
+**Output Summary:**
 
-Output Summary:
-Port	Mode	Encapsulation	Status	Native VLAN
-Gig0/1	On	802.1Q	Trunking	1
+| Port | Mode | Encapsulation | Status | Native VLAN |
+|---|---|---|---|---|
+| Gig0/1 | On | 802.1Q | Trunking | 1 |
 
-VLANs Allowed: 1-1005
+| Verification | Result |
+|---|---|
+| VLANs Allowed | 1-1005 |
+| VLANs Allowed and Active | 1, 10, 20 |
+| VLANs in Spanning Tree Forwarding State | 1, 10, 20 |
 
-VLANs Allowed and Active: 1, 10, 20
+**Verification Result:**
 
-VLANs in Spanning Tree Forwarding State: 1, 10, 20
+GigabitEthernet0/1 is successfully operating as a trunk port. VLANs 1, 10, and 20 are active and forwarding traffic.
 
-Result: GigabitEthernet0/1 is successfully operating as a trunk port. VLANs 1, 10, and 20 are active and forwarding traffic.
+**SW2 Verification Evidence:**
+
+![SW2 Trunk Verification](images/sw2-trunk-verification.png)
+
+---
+
+### Overall Verification
+
+Both SW1 and SW2 have successfully established trunk connections through GigabitEthernet0/1 using IEEE 802.1Q encapsulation.
+
+The verification results confirm that:
+
+- Both trunk ports are in the **Trunking** state.
+- The Native VLAN is configured as **VLAN 1**.
+- VLANs **1, 10, and 20** are allowed and active.
+- VLANs **1, 10, and 20** are in the Spanning Tree Forwarding State.
+
+These results confirm that the trunk links are functioning correctly and are ready to carry traffic between switches.
 ## 4. Interface Status Verification
 
 **Command:**
