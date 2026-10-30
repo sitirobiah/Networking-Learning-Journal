@@ -35,22 +35,40 @@ The verification process checks:
 ![SW2 VLAN Verification](images/sw2-vlan-verification.png)
 ## 3. Trunk Port Verification
 
-**Command:**
+### SW1 Results
 
-```bash
+
 show interfaces trunk
-```
 
-### SW2 Results
 
-| **Port** | **Mode** | **Encapsulation** | **Status** | **Native VLAN** |
-| -------- | -------- | ----------------- | ---------- | --------------- |
-| Gig0/1   | On       | 802.1Q            | Trunking   | 1               |
+Output Summary:
+Port	Mode	Encapsulation	Status	Native VLAN
+Gig0/1	On	802.1Q	Trunking	1
 
-**Result:** GigabitEthernet0/1 is successfully operating as a trunk port. VLANs 1, 10, and 20 are allowed and active on this trunk.
+VLANs Allowed: 1-1005
 
-![SW2 Trunk Verification](images/sw2-trunk-verification.png)
+VLANs Allowed and Active: 1, 10, 20
 
+VLANs in Spanning Tree Forwarding State: 1, 10, 20
+
+Result: GigabitEthernet0/1 is successfully operating as a trunk port. VLANs 1, 10, and 20 are active and forwarding traffic.
+
+SW2 Results
+Command:
+show interfaces trunk
+
+
+Output Summary:
+Port	Mode	Encapsulation	Status	Native VLAN
+Gig0/1	On	802.1Q	Trunking	1
+
+VLANs Allowed: 1-1005
+
+VLANs Allowed and Active: 1, 10, 20
+
+VLANs in Spanning Tree Forwarding State: 1, 10, 20
+
+Result: GigabitEthernet0/1 is successfully operating as a trunk port. VLANs 1, 10, and 20 are active and forwarding traffic.
 ## 4. Interface Status Verification
 
 **Command:**
