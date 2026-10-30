@@ -111,12 +111,17 @@ The verification results confirm that:
 These results confirm that the trunk links are functioning correctly and are ready to carry traffic between switches.
 ## 4. Interface Status Verification
 
+At this stage, I checked the operational status of the switch interfaces using the `show ip interface brief` command.
+
+### SW2 Results
+
 **Command:**
+
 ```bash
 show ip interface brief
 ```
 
-### SW2 Results
+**Output Summary:**
 
 | Interface | Status | Protocol |
 |---|---|---|
@@ -125,7 +130,15 @@ show ip interface brief
 | Gig0/1 | Up | Up |
 | Gig0/2 | Down | Down |
 
-**Result:** Gig0/1 is active, while Gig0/2 has no active physical connection.
+**Verification Evidence:**
+
+![SW2 Interface Status Verification](images/sw2-interface-status.png)
+
+**Result:**
+
+Gig0/1 is active, while Gig0/2 has no active physical connection. Fa0/1 and Fa0/2 are also operational, with both their interface status and line protocol showing Up.
+
+The results confirm that the listed interfaces are operating as expected based on their physical connection status.
 
 ## 5. Connectivity Testing
 
