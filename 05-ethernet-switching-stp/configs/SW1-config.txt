@@ -1,1 +1,39 @@
+! SW1 configuration (Root Bridge)
+enable
+configure terminal
+hostname SW1
 
+vlan 10
+ name HR
+vlan 20
+ name IT
+exit
+
+! EtherChannel to SW2 (LACP)
+interface range fastEthernet 0/1-2
+ channel-group 1 mode active
+exit
+interface port-channel 1
+ switchport mode trunk
+exit
+
+! Single trunk to SW3
+interface fastEthernet 0/3
+ switchport mode trunk
+exit
+
+! Access ports to PCs
+interface fastEthernet 0/4
+ switchport mode access
+ switchport access vlan 10
+exit
+interface fastEthernet 0/5
+ switchport mode access
+ switchport access vlan 20
+exit
+
+! Make SW1 the Root Bridge for VLAN 10 and 20
+spanning-tree vlan 10,20 root primary
+
+end
+write memory
