@@ -1,1 +1,33 @@
+! SW3 configuration
+enable
+configure terminal
+hostname SW3
 
+vlan 10
+ name HR
+vlan 20
+ name IT
+exit
+
+! Trunk to SW1
+interface fastEthernet 0/1
+ switchport mode trunk
+exit
+
+! Trunk to SW2 (blocked by STP)
+interface fastEthernet 0/2
+ switchport mode trunk
+exit
+
+! Access ports to PCs
+interface fastEthernet 0/3
+ switchport mode access
+ switchport access vlan 10
+exit
+interface fastEthernet 0/4
+ switchport mode access
+ switchport access vlan 20
+exit
+
+end
+write memory
