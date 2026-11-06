@@ -81,5 +81,5 @@ Fa0/1 on SW3 (the Root Port) was shut down. STP recalculated and the blocked Fa0
 | SW2 configuration | [configs/SW2-config.txt](configs/SW2-config.txt) |
 | SW3 configuration | [configs/SW3-config.txt](configs/SW3-config.txt) |
 | Packet Tracer file | [topology/stp-lab.pkt](topology/stp-lab.pkt) |
-| Step-by-step guide | [docs/lab-guide.md](docs/lab-guide.md) |
-| Troubleshooting notes | [docs/troubleshooting.md](docs/troubleshooting.md) |
+| Step-by-step guide | [docs/lab-guide.md](/05-ethernet-switching-stp/docs/lab-guide.md) |
+| Troubleshooting notes | [docs/troubleshooting.md](/05-ethernet-switching-stp/docs/troubleshooting.md) |
