@@ -1,0 +1,11 @@
+# Phase 3 - Cost and failover - R3 (Branch)
+# Step 2: fix the reference bandwidth (all three routers)
+set protocols ospf reference-bandwidth 10g
+commit
+
+# Step 3: make the direct R1-R3 link "slow" (also on R1)
+set protocols ospf area 0.0.0.0 interface em1.0 metric 100
+commit
+
+# Verify
+# run show ospf interface detail
