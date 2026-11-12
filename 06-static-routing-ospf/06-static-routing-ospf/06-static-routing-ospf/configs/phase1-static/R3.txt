@@ -1,8 +1,0 @@
-# Phase 1 - Static routing - R3 (Branch)
-# Step 2: return route to the HQ LAN via the direct R1-R3 link
-set routing-options static route 10.10.1.0/24 next-hop 10.0.13.1
-commit
-
-# Verify
-# run show route 10.10.1.0/24
-# PC-HQ: ping 10.10.3.10
