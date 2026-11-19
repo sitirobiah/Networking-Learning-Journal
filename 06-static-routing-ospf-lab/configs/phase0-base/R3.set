@@ -1,0 +1,5 @@
+set system host-name R3
+set interfaces ge-0/0/0 unit 0 family inet address 10.0.23.2/30
+set interfaces ge-0/0/1 unit 0 family inet address 10.0.13.2/30
+set interfaces ge-0/0/2 unit 0 family inet address 10.10.3.1/24
+set interfaces lo0 unit 0 family inet address 10.255.255.3/32
