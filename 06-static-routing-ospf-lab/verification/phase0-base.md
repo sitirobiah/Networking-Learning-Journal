@@ -19,12 +19,15 @@ R2: `ping 10.0.23.2 count 3`
 ## 3. Host-to-gateway ping
 
 - **PC-HQ:** `ping 10.10.1.1`
+
   ![PC-HQ gateway ping](../screenshots/phase0/phase0-06-host-gateway-ping-a.png)
 
 - **PC-BR:** `ping 10.10.3.1`
+
   ![PC-BR gateway ping](../screenshots/phase0/phase0-06-host-gateway-ping-b.png)
 
 - **Internet-Host:** `ping 203.0.113.2`
+
   ![Internet-Host gateway ping](../screenshots/phase0/phase0-06-host-gateway-ping-c.png)
   
 ## 4. Expected failure: PC-HQ -> PC-BR
