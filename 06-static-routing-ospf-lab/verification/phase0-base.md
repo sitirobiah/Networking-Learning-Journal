@@ -26,6 +26,7 @@ R2: `ping 10.0.23.2 count 3`
 
 - **Internet-Host:** `ping 203.0.113.2`
   ![Internet-Host gateway ping](../screenshots/phase0/phase0-06-host-gateway-ping-c.png)
+  
 ## 4. Expected failure: PC-HQ -> PC-BR
 `ping 10.10.3.10` from PC-HQ fails.
 ![PC-HQ to PC-BR fails](../screenshots/phase0/phase0-07-pchq-pcbr-fail.png)
