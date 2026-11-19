@@ -1,0 +1,9 @@
+# R3 (Branch) - Phase 1 Static Routing Configuration
+set system host-name R3
+set interfaces em0 unit 0 family inet address 10.0.23.2/30
+set interfaces em1 unit 0 family inet address 10.0.13.2/30
+set interfaces em2 unit 0 family inet address 10.10.3.1/24
+set interfaces lo0 unit 0 family inet address 10.255.255.3/32
+
+# Static Route (Phase 1)
+set routing-options static route 10.10.1.0/24 next-hop 10.0.13.1
