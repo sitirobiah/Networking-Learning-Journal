@@ -10,12 +10,18 @@ Command (on R1, R2, R3): `show interfaces terse | match inet`
 ![R3 interfaces](../screenshots/phase0/phase0-03-r3-interfaces.png)
 
 ## 2. Router-to-router ping
-R1: `ping 10.0.12.2 count 3` and `ping 10.0.13.2 count 3`
-![R1 ping neighbors](../screenshots/phase0/phase0-04-r1-ping-neighbors.png)
 
-R2: `ping 10.0.23.2 count 3`
-![R2 ping R3](../screenshots/phase0/phase0-05-r2-ping-r3.png)
+- **R1 to R2:** `ping 10.0.12.2 count 3`
 
+  ![R1 ping R2](../screenshots/phase0/phase0-04-r1-ping-r2.png)
+
+- **R1 to R3:** `ping 10.0.13.2 count 3`
+
+  ![R1 ping R3](../screenshots/phase0/phase0-04-r1-ping-r3.png)
+
+- **R2 to R3:** `ping 10.0.23.2 count 3`
+
+  ![R2 ping R3](../screenshots/phase0/phase0-05-r2-ping-r3.png)
 ## 3. Host-to-gateway ping
 
 - **PC-HQ:** `ping 10.10.1.1`
