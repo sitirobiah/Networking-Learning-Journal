@@ -1,0 +1,5 @@
+# R2 (WAN) - Phase 1 Configuration (Unchanged from Base Config)
+set system host-name R2
+set interfaces em0 unit 0 family inet address 10.0.12.2/30
+set interfaces em1 unit 0 family inet address 10.0.23.1/30
+set interfaces lo0 unit 0 family inet address 10.255.255.2/32
