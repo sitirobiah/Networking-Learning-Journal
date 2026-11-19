@@ -41,13 +41,9 @@ Raising the OSPF metric to **100** on both ends of the direct R1–R3 link (`ge-
 ---
 
 ## 4. Automatic Link Failure Failover & Recovery Test
-While running a continuous ping (`ping 10.10.3.10 -t`) on PC-HQ, the transit link between R2 and R3 was disabled on R2 (`set interfaces ge-0/0/1 disable`).
+While running a continuous ping (`ping 10.10.3.10 -t`) on PC-HQ, the transit link between R2 and R3 (`ge-0/0/1`) was disabled on R2 (`set interfaces ge-0/0/1 disable` and `commit`).
 
-- **R2 (Break Primary Path):** `set interfaces ge-0/0/1 disable` and `commit`
-
-  ![R2 disable ge-0/0/1](../screenshots/phase3/phase3-04-failover-ping-a.png)
-
-- **PC-HQ (Continuous Ping Observation):** Traffic experienced only brief packet loss during OSPF reconvergence before automatically resuming.
+- **PC-HQ (Continuous Ping Observation):** Traffic experienced minimal to no packet loss during OSPF reconvergence and automatically shifted from `ttl=61` (via R2) to `ttl=62` (direct R1–R3 path).
 
   ![Continuous ping auto-recovery](../screenshots/phase3/phase3-04-failover-ping-b.png)
 
@@ -62,8 +58,6 @@ While running a continuous ping (`ping 10.10.3.10 -t`) on PC-HQ, the transit lin
 - **R1 (Recovery Observation):** After re-enabling `ge-0/0/1` on R2 (`delete interfaces ge-0/0/1 disable` and `commit`), OSPF restored the R2–R3 adjacency and automatically returned traffic to the preferred lower-cost path via `10.0.12.2`.
 
   ![R1 routing table after link recovery](../screenshots/phase3/phase3-06-recovery-via-r2.png)
-
----
 
 ## 5. Verification Checklist & Lab Comparison
 
